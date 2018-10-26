@@ -42,9 +42,11 @@ def calculate(args):
     return stack.pop()
 
 def main():
-    while True:
-        result = calculate(input('rpn calc> '))
+    args = input('rpn calc> ')
+    while args != 'quit' and args != 'exit' and args != 'q':
+        result = calculate(args)
         print("Result:", result)
+        args = input('rpn calc> ')
 
 if __name__ == '__main__':
     main()
