@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 
+import operator
+
+operators = {
+    '+': operator.add,
+    '-': operator.sub,
+    '*': operator.mul,
+    '/': operator.floordiv,
+}
+
 def calculate(args):
     #stack for calculator
     stack = list()
@@ -11,14 +20,11 @@ def calculate(args):
             value = int(token)
             stack.append(value)
         except ValueError:
+            func = operators[token]
             arg2 = stack.pop()
             arg1 = stack.pop()
-            if token == '+':
-                result = arg1 + arg2
-                stack.append(result)
-            elif token == '-':
-                result = arg1 - arg2
-                stack.append(result)
+            result = func(arg1, arg2)
+            stack.append(result)
             return stack[0]
 
 def main():

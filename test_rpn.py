@@ -31,6 +31,6 @@ class TestBasics(unittest.TestCase):
         self.assertEqual(2, result)
         
     def test_div2(self):
-        result = rpn.calculate('-3 3 -')
-        self.assertEqual(-1, result)
+        result = rpn.calculate('3 3 /')
+        self.assertEqual(1, result)
 
