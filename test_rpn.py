@@ -46,3 +46,6 @@ class TestBasics(unittest.TestCase):
         result = rpn.calculate('123 0 ^')
         self.assertEqual(1, result)
 
+    def test_toomany(self):
+        with self.assertRaises(TypeError):
+            result = rpn.calculate('1 1 1 +')
