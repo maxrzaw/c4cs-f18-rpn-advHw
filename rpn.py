@@ -13,8 +13,12 @@ def calculate(args):
         except ValueError:
             arg2 = stack.pop()
             arg1 = stack.pop()
-            result = arg1 + arg2
-            stack.append(result)
+            if token == '+':
+                result = arg1 + arg2
+                stack.append(result)
+            elif token == '-':
+                result = arg1 - arg2
+                stack.append(result)
             return stack[0]
 
 def main():
