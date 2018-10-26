@@ -8,8 +8,11 @@ operators = {
     '*': operator.mul,
     '/': operator.truediv,
     '^': operator.pow,
-    'sin': np.sin,
     '%': operator.mod,
+    'sin': np.sin,
+    'cos': np.cos,
+    'tan': np.tan,
+
 }
 
 def calculate(args):
