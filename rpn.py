@@ -25,12 +25,15 @@ def calculate(args):
             arg1 = stack.pop()
             result = func(arg1, arg2)
             stack.append(result)
-            return stack[0]
+        print(stack[0])
+    if len(stack) != 1:
+        raise TypeError("too many parameters")
+    return stack.pop()
 
 def main():
     while True:
         result = calculate(input('rpn calc> '))
-        print(result)
+        print("Result: ", result)
 
 if __name__ == '__main__':
     main()
