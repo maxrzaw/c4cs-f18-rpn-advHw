@@ -49,3 +49,11 @@ class TestBasics(unittest.TestCase):
     def test_toomany(self):
         with self.assertRaises(TypeError):
             result = rpn.calculate('1 1 1 +')
+
+    def test_sin(self):
+        result = rpn.calculate('0 sin')
+        self.assertEqual(0, result)
+
+    def test_sin2(self):
+        result = rpn.calculate('90 sin')
+        self.assertEqual(1, result)

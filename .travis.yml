@@ -6,6 +6,7 @@ install:
   - pip install python-coveralls
   - pip install coverage
   - pip install nose
+  - pip install numpy
 
 script:
   - make travis
