@@ -32,9 +32,8 @@ def calculate(args):
                 # sin cos tan should end up here
                 func = operators[token]
                 arg = stack.pop() * np.pi / 180
-                result = func(arg)
+                result = round(func(arg), 3)
             stack.append(result)
-        print(stack[0])
     if len(stack) != 1:
         raise TypeError("too many parameters")
     return stack.pop()
@@ -42,7 +41,7 @@ def calculate(args):
 def main():
     while True:
         result = calculate(input('rpn calc> '))
-        print("Result: ", result)
+        print("Result:", result)
 
 if __name__ == '__main__':
     main()
