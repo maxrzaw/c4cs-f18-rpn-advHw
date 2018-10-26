@@ -33,4 +33,7 @@ class TestBasics(unittest.TestCase):
     def test_div2(self):
         result = rpn.calculate('3 3 /')
         self.assertEqual(1, result)
+    def test_chain(self):
+        result = rpn.calculate('1 2 + 1 +')
+        self.assertEqual(4, result)
 
