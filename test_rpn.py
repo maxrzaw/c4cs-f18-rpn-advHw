@@ -57,3 +57,28 @@ class TestBasics(unittest.TestCase):
     def test_sin2(self):
         result = rpn.calculate('90 sin')
         self.assertEqual(1, result)
+
+
+    def test_cos(self):
+        result = rpn.calculate('0 cos')
+        self.assertEqual(1, result)
+
+    def test_cos2(self):
+        result = rpn.calculate('90 cos')
+        self.assertEqual(0, result)
+
+    def test_cos180(self):
+        result = rpn.calculate('180 cos')
+        self.assertEqual(-1, result)
+
+    def test_tan(self):
+        result = rpn.calculate('0 tan')
+        self.assertEqual(0, result)
+
+    def test_tan2(self):
+        result = rpn.calculate('45 tan')
+        self.assertEqual(1, result)
+
+    def test_sin180(self):
+        result = rpn.calculate('180 sin')
+        self.assertEqual(0, result)
