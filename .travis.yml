@@ -9,7 +9,7 @@ install:
 
 script:
   - make travis
-  -nosetests --with-coverage
+  - nosetests --with-coverage
 
 after_success:
   - coveralls
