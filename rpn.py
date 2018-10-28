@@ -12,7 +12,6 @@ operators = {
     'sin': np.sin,
     'cos': np.cos,
     'tan': np.tan,
-
 }
 
 def calculate(args):
